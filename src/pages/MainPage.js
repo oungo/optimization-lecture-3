@@ -4,9 +4,12 @@ import ThreeColumns from '../components/ThreeColumns'
 import TwoColumns from '../components/TwoColumns'
 import Card from '../components/Card'
 import Meta from '../components/Meta'
-import _main1 from '../assets/_main1.webp'
-import _main2 from '../assets/_main2.webp'
-import _main3 from '../assets/_main3.webp'
+import _main1_webp from '../assets/_main1.webp'
+import _main2_webp from '../assets/_main2.webp'
+import _main3_webp from '../assets/_main3.webp'
+import _main1 from '../assets/_main1.jpg'
+import _main2 from '../assets/_main2.jpg'
+import _main3 from '../assets/_main3.jpg'
 import TwoColumnsImage from '../components/TwoColumnsImage'
 import main_items from '../assets/main-items.jpg'
 import main_parts from '../assets/main-parts.jpg'
@@ -19,9 +22,9 @@ function MainPage(props) {
 			<div className="mx-auto">
 				<ThreeColumns
 					columns={[
-						<Card image={_main1}>롱보드는 아주 재밌습니다.</Card>,
-						<Card image={_main2}>롱보드를 타면 아주 신납니다.</Card>,
-						<Card image={_main3}>롱보드는 굉장히 재밌습니다.</Card>
+						<Card image={_main1} webp={_main1_webp}>롱보드는 아주 재밌습니다.</Card>,
+						<Card image={_main2} webp={_main2_webp}>롱보드를 타면 아주 신납니다.</Card>,
+						<Card image={_main3} webp={_main3_webp}>롱보드는 굉장히 재밌습니다.</Card>
 					]}
 				/>
 				<TwoColumns
