@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 
-function TwoColumnsImage ({ image }) {
+function TwoColumnsImage ({ image, webp }) {
   const imgRef = useRef(null);
 
   useEffect(() => {
@@ -8,6 +8,7 @@ function TwoColumnsImage ({ image }) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.src = entry.target.dataset.src;
+          entry.target.previousSibling.srcset = entry.target.previousSibling.dataset.srcset
           observer.unobserve(entry.target);
         }
       });
@@ -18,7 +19,10 @@ function TwoColumnsImage ({ image }) {
   }, []);
 
   return (
-    <img data-src={image} ref={imgRef} />
+    <picture>
+      <source data-srcSet={webp} type="image/webp" />
+      <img data-src={image} ref={imgRef} />
+    </picture>
   )
 }
 
