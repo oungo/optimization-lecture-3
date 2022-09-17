@@ -20,7 +20,7 @@ function TwoColumnsImage ({ image, webp }) {
 
   return (
     <picture>
-      <source data-srcSet={webp} type="image/webp" />
+      <source data-srcset={webp} type="image/webp" />
       <img data-src={image} ref={imgRef} />
     </picture>
   )
